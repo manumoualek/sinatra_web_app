@@ -6,6 +6,6 @@ get '/secret' do
 end
 
 get '/cat' do
-  '<img style ="border:dashed red;" src="https://i.imgur.com/jFaSxym.png">'
+  erb(:index)
   # send_file "cat.html"
 end
