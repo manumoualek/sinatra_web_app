@@ -5,8 +5,13 @@ get '/secret' do
   "Sssshhh this is a secret"
 end
 
-get '/cat' do
+get '/random-cat' do
   @names = ["Amigo", "Misty", "Almond"].sample
   erb(:index)
-  # send_file "cat.html"
+end
+
+get '/named-cat' do
+  p params
+  @names = params[:name] + " " + params[:lastname]
+  erb(:index)
 end
