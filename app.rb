@@ -6,6 +6,7 @@ get '/secret' do
 end
 
 get '/cat' do
+  @names = ["Amigo", "Misty", "Almond"].sample
   erb(:index)
   # send_file "cat.html"
 end
